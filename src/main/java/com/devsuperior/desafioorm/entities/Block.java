@@ -18,8 +18,8 @@ public class Block {
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant fim;
 
-    @OneToOne
-    @MapsId
+    @ManyToOne
+    @JoinColumn(name = "activity_id", nullable = false)
     private Activity activity;
 
     public Block(){
